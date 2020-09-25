@@ -199,6 +199,7 @@ hr {
 }
 .course ul {
   position: absolute;
+  list-style: none;
   bottom: 48px;
   left: 630px;
 }
@@ -345,36 +346,46 @@ aside {
   text-align: center;
   background-color: white;
 }
-
 footer {
-  background-color: black;
+  box-sizing: border-box;
   height: 106px;
+  background-color: black;
+  padding: 33px 0;
+}
+
+.footer-nav {
+  height: 11px;
+  line-height: 11px;
+  margin-bottom: 13px;
 }
 
 footer ul {
+  list-style: none;
   height: 11px;
-  padding-top: 33px;
+  margin: 0;
+  padding: 0;
+  line-height: 11px;
   text-align: center;
 }
 
 footer li {
   display: inline-block;
-  font-size: 11px;
+  height: 11px;
   line-height: 11px;
+  margin: 0 17px;
 }
 
 footer a {
   display: block;
+  font-size: 11px;
   text-decoration: none;
   color: white;
-  height: 11px;
   line-height: 11px;
+  height: 11px;
 }
 
 footer p {
-  height: 12px;
-  text-align: center;
-  padding: 14px 0px 36px 0px;
+  font-size: 16px;
   color: grey;
-  font-size: 12px;
+  text-align: center;
 }
