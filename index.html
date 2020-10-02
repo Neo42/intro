@@ -14,16 +14,19 @@
           <span>H5实战页面</span>
         </a>
         <ul class="nav-links">
-          <li class="nav-link"><a href="#">实战课程</a></li>
-          <li class="nav-link"><a href="#">商业案例</a></li>
-          <li class="nav-link"><a href="#">课程体系</a></li>
-          <li class="nav-link"><a href="#">集成环境</a></li>
-          <li class="nav-link"><a href="#">云端学习</a></li>
-          <li class="nav-link"><a class="button" href="#">即刻学习</a></li>
+          <span class="indicator"></span>
+          <li class="nav-link link"><a href="#jumbotron">实战课程</a></li>
+          <li class="nav-link link"><a href="#case">商业案例</a></li>
+          <li class="nav-link link"><a href="#course">课程体系</a></li>
+          <li class="nav-link link"><a href="#environment">集成环境</a></li>
+          <li class="nav-link link"><a href="#cloud">云端学习</a></li>
+          <li class="nav-link button">
+            <a class="button" href="#">即刻学习</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <div class="wrapper">
+    <div class="wrapper" id="jumbotron">
       <section class="screen jumbotron">
         <dl>
           <dt>
@@ -33,7 +36,7 @@
         </dl>
       </section>
     </div>
-    <div class="case-wrapper">
+    <div class="case-wrapper" id="case">
       <section class="screen case">
         <dl>
           <dt>
@@ -54,9 +57,9 @@
         </div>
       </section>
     </div>
-    <div class="course-wrapper">
+    <div class="course-wrapper" id="course">
       <section class="screen course">
-        <img src="./img/sc3.png" id="course" />
+        <img src="./img/sc3.png" id="atom" />
         <dl>
           <dt>
             <h1>强大的语言课程体系支持</h1>
@@ -78,7 +81,7 @@
         </ul>
       </section>
     </div>
-    <section class="screen environment">
+    <section class="screen environment" id="environment">
       <dl>
         <dt>
           <h1>省去本地复杂的环境搭建</h1>
@@ -103,7 +106,7 @@
         </dd>
       </dl>
     </section>
-    <div class="cloud-wrapper">
+    <div class="cloud-wrapper" id="cloud">
       <section class="screen cloud">
         <img src="./img/sc5-1.png" />
         <dl>
@@ -120,15 +123,14 @@
       </section>
     </div>
     <section class="continue"><button>继续了解学习体验</button></section>
-
     <aside>
       <nav class="side-nav">
         <ul class="side-nav-links">
-          <li><a href="#" class="side-nav-link">实</a></li>
-          <li><a href="#" class="side-nav-link">商</a></li>
-          <li><a href="#" class="side-nav-link">课</a></li>
-          <li><a href="#" class="side-nav-link">环</a></li>
-          <li><a href="#" class="side-nav-link">云</a></li>
+          <li class="side-nav-link"><a href="#jumbotron">实</a></li>
+          <li class="side-nav-link"><a href="#case">商</a></li>
+          <li class="side-nav-link"><a href="#course">课</a></li>
+          <li class="side-nav-link"><a href="#environment">环</a></li>
+          <li class="side-nav-link"><a href="#cloud">云</a></li>
         </ul>
       </nav>
     </aside>
