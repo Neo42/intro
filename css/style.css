@@ -13,6 +13,7 @@ header {
   font-size: 12px;
   width: 100%;
   height: 60px;
+  background: linear-gradient(black, transparent);
 }
 
 .logo-link {
@@ -243,9 +244,9 @@ hr {
 /* 第三屏 */
 .course-wrapper {
   width: 100%;
-  position: absolute;
+  position: relative;
   background-color: rgb(43, 51, 59);
-  z-index: 999;
+  z-index: 10;
 }
 
 .course dl {
@@ -281,22 +282,52 @@ hr {
   margin: 0;
   color: rgb(43, 51, 59);
 }
+
+.course.animated h1 {
+  animation: h1Appears 1s ease-in-out forwards;
+}
+
+.course.animated span {
+  animation: spanAppears 1s ease-in-out 0.5s forwards;
+}
+
+.course.animated hr {
+  animation: spanAppears 1s ease-in-out 0.5s forwards;
+}
+
 .course ul {
   position: absolute;
   list-style: none;
-  bottom: 48px;
+  bottom: -100px;
   left: 630px;
+  transition: ease 1s;
+  transition-delay: 2s;
+  height: 70px;
+}
+
+.course.animated ul {
+  bottom: 48px;
+  animation: coursesAppear 2s ease 3s forwards;
 }
 
 .course li {
-  margin: 0 13px;
-  float: left;
+  margin: 1px 13px;
+  display: inline-block;
   box-sizing: border-box;
   width: 68px;
   height: 68px;
   border-radius: 50%;
   border: 5px solid;
-  line-height: 60px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.course li span {
+  display: inline;
+}
+
+.course.animated li {
+  animation: coursesBreathe 3s ease-out 3s forwards;
 }
 
 li.html5 {
@@ -330,7 +361,13 @@ li.nodejs {
 }
 
 /* 第四屏 */
-.environment dl {
+#environment {
+  position: relative;
+  z-index: 999;
+  background-color: white;
+}
+
+#environment dl {
   color: black;
   position: relative;
   top: 89px;
@@ -353,11 +390,32 @@ li.nodejs {
 
 .features li {
   text-align: center;
+  transform: scale(0);
 }
 
 .features span {
   margin-top: 25px;
   font-size: 16px;
+}
+
+li.feature span {
+  opacity: 100%;
+}
+
+.environment.animated h1 {
+  animation: h1Appears 1s ease-in-out forwards;
+}
+
+.environment.animated dd > span {
+  animation: spanAppears 1s ease-in-out 1s forwards;
+}
+
+.environment.animated hr {
+  animation: spanAppears 1s ease-in-out 1s forwards;
+}
+
+.environment.animated li.feature {
+  animation: featureExpand 1s ease forwards;
 }
 
 /* 第五屏 */
@@ -375,6 +433,8 @@ li.nodejs {
   right: 0;
   left: 0;
   margin: auto;
+  transform: scale(0);
+  transition: 1s ease;
 }
 
 .cloud dl {
@@ -387,6 +447,22 @@ li.nodejs {
 
 .cloud hr {
   border-color: white;
+}
+
+.cloud.animated img {
+  transform: scale(1);
+}
+
+.cloud.animated h1 {
+  animation: h1Appears 1s ease-in-out forwards;
+}
+
+.cloud.animated dd > span {
+  animation: spanAppears 1s ease-in-out 1s forwards;
+}
+
+.cloud.animated hr {
+  animation: spanAppears 1s ease-in-out 1s forwards;
 }
 
 /* 继续学习 */
@@ -522,11 +598,9 @@ footer p {
 @keyframes manAppears {
   from {
     opacity: 0;
-    top: -300px;
   }
   to {
     opacity: 100%;
-    top: -360px;
   }
 }
 
@@ -554,5 +628,35 @@ footer p {
   to {
     left: 100px;
     height: 80%;
+  }
+}
+
+@keyframes coursesBreathe {
+  0% {
+    width: 68px;
+    height: 68px;
+    line-height: 58px;
+    margin: 1px 13px;
+  }
+  50% {
+    width: 70px;
+    height: 70px;
+    line-height: 58px;
+    margin: 0px 12px;
+  }
+  100% {
+    width: 68px;
+    height: 68px;
+    line-height: 58px;
+    margin: 1px 13px;
+  }
+}
+
+@keyframes featureExpand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
