@@ -330,7 +330,7 @@ hr {
 }
 
 .course.animated li {
-  animation: coursesBreathe 3s ease-out 3s forwards;
+  animation: coursesBreathe 1s ease-out 3s forwards;
 }
 
 li.html5 {
